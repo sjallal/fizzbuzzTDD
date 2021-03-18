@@ -23,4 +23,12 @@ public class FizzBuzzTest {
         String convertedNumber = fizzBuzz.convert(number);
         assertThat(convertedNumber, is("buzz"));
     }
+
+    @Test
+    void shouldReturnFizzBuzzIfNumberIsMultipleOf3And5() {
+        int number = 15;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String convertedNumber = fizzBuzz.convert(number);
+        assertThat(convertedNumber, is("fizzbuzz"));
+    }
 }
