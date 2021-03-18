@@ -14,7 +14,13 @@ public class FizzBuzzTest {
         String convertedNumber = fizzBuzz.convert(number);
 
         assertThat(convertedNumber, is("fizz"));
+    }
 
-
+    @Test
+    void shouldReturnBuzzIfNumberIsMultipleOf5() {
+        int number = 5;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String convertedNumber = fizzBuzz.convert(number);
+        assertThat(convertedNumber, is("buzz"));
     }
 }
