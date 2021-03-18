@@ -7,6 +7,8 @@ public class FizzBuzz {
             convertedNumber += "fizz";
         if(number % 5 == 0)
             convertedNumber += "buzz";
+        else
+            convertedNumber += String.valueOf(number);
         return convertedNumber;
     }
 }

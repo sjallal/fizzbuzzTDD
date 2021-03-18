@@ -31,4 +31,12 @@ public class FizzBuzzTest {
         String convertedNumber = fizzBuzz.convert(number);
         assertThat(convertedNumber, is("fizzbuzz"));
     }
+
+    @Test
+    void shouldReturnSameNumberIfNumberIsNotMultipleOf3And5() {
+        int number = 7;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String convertedNumber = fizzBuzz.convert(number);
+        assertThat(convertedNumber, is(String.valueOf(number)));
+    }
 }
